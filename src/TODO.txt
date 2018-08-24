@@ -1,0 +1,4 @@
+1. How to use Dropdown correctly
+2. Refactor code
+3. Separate out components
+4. <Dropdown options={options} onChange{this._onSelect} value={defaultSize} placeholder='Select an option' />
