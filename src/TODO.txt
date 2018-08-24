@@ -1,4 +1,9 @@
-1. How to use Dropdown correctly
-2. Refactor code
-3. Separate out components
-4. <Dropdown options={options} onChange{this._onSelect} value={defaultSize} placeholder='Select an option' />
+1. How to use Dropdown correctly?
+  1a. 4. <Dropdown options={options} onChange{this._onSelect} value={defaultSize} placeholder='Select an option' />
+2. Align each row properly via flexbox
+3. Add functionality to calculate cart total
+4. Refactor code
+5. Separate out components
+6. How to eliminate hard coding?
+  5a. Where are all the areas I can loop through rather than hard code stuff?
+7. Lots of CSS
