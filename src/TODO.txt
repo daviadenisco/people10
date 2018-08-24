@@ -7,3 +7,15 @@
 6. How to eliminate hard coding?
   5a. Where are all the areas I can loop through rather than hard code stuff?
 7. Lots of CSS
+
+Web development Test Directions:
+Develop a static webpage in ReactJS for shopping-cart as per the UI design provided.
+Screenshots of the application for Web development Test please find in the /public/referenceImages folder.
+
+Specifications:
+1. User can remove items from the cart.
+2. User can edit a product, and change fields like size, color and quantity.
+3. Based on above edits, the total price of the shopping value should get updated accordingly.
+    3a. Davia's question: I assume this also means that the "free shipping" should render only if cartTotal > $50 || >= $50?
+4. Write a brief documentation on how to install and run the application
+5. Share the zip file over email.

@@ -115,7 +115,7 @@ class App extends Component {
             <p>SUB TOTAL</p>
             <p>PROMOTION CODE AJ10 APPLIED</p>
             <p>ESTIMATED SHIPPING*</p>
-            <p>You qualify for free shipping because your order os over $50</p>
+            <p>You qualify for free shipping because your order is over $50</p>
             <p>ESTIMATED TOTAL</p>
             <p>Tax will be applied during checkout</p>
             <a>CONTINUE SHOPPING</a><button>CHECKOUT</button>
