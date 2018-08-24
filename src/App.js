@@ -3,7 +3,7 @@ import Dropdown from 'react-dropdown';
 import './App.css';
 import 'react-dropdown/style.css';
 const options = ['small', 'medium', 'large', 'extra large'];
-const colors = ['red', 'pink', 'blue', 'check']
+const colors = ['red', 'pink', 'blue']
 const defaultSize = options[0];
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
       image: './images/red-logo-shirt.jpg',
       itemName: "COTTON TSHIRT",
       style: "Style #: MS13KT1906",
-      color: "Color: " + colors[0],
+      color: "Color: " + colors[2],
       size: "S",
       quantity: 1,
       price: "$11.00",
@@ -45,7 +45,7 @@ class App extends Component {
       image: './images/plaid-button-shirt.jpg',
       itemName: "CHECK PATTERN TSHIRT",
       style: "Style #: MS13KT1909",
-      color: "Color: " + colors[3],
+      color: "Color: " + colors[0],
       size: "M",
       quantity: 1,
       price: "$22.00",
