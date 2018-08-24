@@ -90,7 +90,7 @@ class App extends Component {
                   <div id="right">
                     <li id="itemSize">{item.size}</li>
                     <form>
-                      <label for="quantity">QTY</label>
+                      <label for="quantity"></label>
                       <input type="text" id="quantity" name="quantity"/>
                     </form>
                     <li id="itemPrice">{item.price}</li>
