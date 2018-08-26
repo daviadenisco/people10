@@ -10,6 +10,9 @@ class App extends Component {
   state = {
     header: "YOUR SHOPPING CART",
     subHeader: "If the cart is completely empty, then we shall again add back the products for you.",
+    edit: "EDIT",
+    remove: "X REMOVE",
+    save: "SAVE FOR LATER",
     items: [{
       id: 1,
       image: './images/red-logo-shirt.jpg',
@@ -38,7 +41,8 @@ class App extends Component {
       color: "Color: " + colors[2],
       size: "S",
       quantity: 1,
-      price: "$21.00",
+      oldPrice: "$21.00",
+      price: "$9.00"
     },
     {
       id: 4,
@@ -74,35 +78,48 @@ class App extends Component {
           <h1 className="header">{this.state.header}</h1>
           <h5 className="subHeader">{this.state.subHeader}</h5>
         </header>
-        <ul>
+        <div className="container">
           {
             this.state.items.map(item => {
               return (
-                <div id="itemsDiv" key={item.id}>
-                  <div id="left">
-                    <img src={item.image} alt="product"/>
+
+                  <div className="container row" id="itemsDiv" key={item.id}>
+
+                    <div className="col-">
+                      <img src={item.image} alt="product"/>
+                    </div>
+
+                    <div className="col-sm">
+                      <li id="itemName">{item.itemName}</li>
+                      <br/>
+                      <li id="itemStyle">{item.style}</li>
+                      <br/>
+                      <li id="itemColor">{item.color}</li>
+                      <br/>
+                      <a>EDIT</a>
+                      <a>X REMOVE</a>
+                      <a>SAVE FOR LATER</a>
+                    </div>
+
+                    <div className="col-">
+                      <li id="itemSize">{item.size}</li>
+                    </div>
+                    <div className="col-">
+                      <form>
+                        <label for="quantity"></label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="99" step="1" value="1"/>
+                      </form>
+                    </div>
+                    <div className="col-" id="itemPrice">
+                      <li id="itemPrice">{item.price}</li>
+                    </div>
+
                   </div>
-                  <div id="middle">
-                    <li id="itemName">{item.itemName}</li>
-                    <li id="itemStyle">{item.style}</li>
-                    <li id="itemColor">{item.color}</li>
-                  </div>
-                  <div id="right">
-                    <li id="itemSize">{item.size}</li>
-                    <form>
-                      <label for="quantity"></label>
-                      <input type="number" id="quantity" name="quantity" min="1" max="99" step="1" value="1"/>
-                    </form>
-                    <li id="itemPrice">{item.price}</li>
-                  </div>
-                <div>
-                  {/* <Dropdown options={options} onChange{this._onSelect} value={defaultSize} placeholder='Select an option' /> */}
-                </div>
-              </div>
+
               )
             })
           }
-        </ul>
+        </div>
         <div id="bottomDiv">
           <div id="bottomLeft">
             <p>Need help or have questions?</p>

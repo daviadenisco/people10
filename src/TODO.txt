@@ -9,6 +9,8 @@ TODOS
   5a. Where are all the areas I can loop through rather than hard code stuff?
 7. Lots of CSS
 8. Do I need to use a table of some kind?
+9. How to properly store price? Is there a way to store it as a number so I won't need to parseInt()?
+10. How to store Style # so I don't have it typed out on each line?
 
 Web development Test Directions:
 Develop a static webpage in ReactJS for shopping-cart as per the UI design provided.
