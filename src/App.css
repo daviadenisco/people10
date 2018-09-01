@@ -1,17 +1,115 @@
 body {
   padding: 0;
   margin: 0;
+  margin-top: 20px;
+  margin-left: 17.5%;
+  padding-right: 16%;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
 }
 
-header {
-  margin: 20px;
+div.container {
+  margin: 0;
 }
 
-#itemsDiv {
-  border-top: 1px solid black;
+h1.header {
+  margin-bottom: 12px;
+  padding-left: 14px;
+  font-size: 30px;
+}
+
+h5.subHeader {
+  padding-bottom: 2px;
+  padding-left: 14px;
+  font-size: 12px;
+  letter-spacing: -0.055px;
+  color: #A6A6A6;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+ul#itemsTableHeader {
+  padding-top: 3px;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+}
+
+#itemsTableHeaderSize {
+  margin-left: 664px;
+}
+
+#itemsTableHeaderQty {
+  margin-left: 50px;
+}
+
+#itemsTableHeaderPrice {
+  margin-left: 144px;
+}
+
+div#itemsDiv.container.row {
+  margin-left: -15px;
+  border-top: 1px solid #A6A6A6;
+  padding-top: 6px;
+  padding-bottom: 4px;
 }
 
 img {
+  margin-left: -10px;
+  width: 112%;
+}
+
+div#item-info-main.col-sm {
+  padding-left: 12px;
+  font-size: 14px;
+  padding-top: 2px;
+}
+
+
+li#itemStyle {
+  color: #A6A6A6;
+}
+
+li#color {
+  color: #A6A6A6;
+  padding: 0;
+}
+
+li#itemColor {
+  color: #A6A6A6;
+  font-weight: bolder;
+}
+
+li.itemMods {
+  font-size: 14px;
+  border-left: 1px solid #A6A6A6;
+  padding-left: 6px;
+  padding-right: 7px;
+  line-height: 10px;
+}
+
+button.btn.btn-primary.edit {
+  color: black;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  padding-right: 5px;
+  margin-top: 6px;
+  vertical-align: 0;
+  font-size: 14px;
+}
+
+button.btn.btn-primary.itemMods:hover {
+  color: black;
+  background-color: transparent;
+  border: none;
+}
+
+#item-info-main {
+  margin-top: 10px;
+}
+
+#itemsDiv > div.col-sm > button {
+  border: none;
 }
 
 li {
@@ -21,11 +119,125 @@ li {
   padding-right: 10px;
 }
 
-li.itemInfo {
+div#edit-x-save {
+  padding-top: 0;
+}
+
+div#size-qty-price {
+  display: flex;
+  padding-top: 11.5px;
+}
+
+li#itemSize {
+  font-weight: bolder;
+  font-size: 15.5px;
+  margin-left: -272px;
+}
+
+form#form {
+  padding-top: 2px;
+  margin-left: -198px;
+}
+
+input#quantity {
+  padding-left: 12px;
 }
 
 li#itemPrice {
   text-align: right;
-  margin-right: -24px;
-  padding-left: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: -18px;
+  margin-right: -18px;
+  padding-top: 10px;
+}
+
+div.modal-dialog.modal-dialog-centered {
+  max-width: 600px;
+  margin-top: -11.25%;
+}
+
+div.modal-content {
+  height: 430px;
+}
+
+div.modal-body {
+  display: flex;
+}
+
+button#modal-close.btn.btn-secondary {
+  float: right;
+  background: transparent;
+  color: #A6A6A6;
+  border: none;
+  margin-right: -30px;
+  margin-top: -10px;
+}
+
+div.modal-left.col-md {
+  text-align: center;
+  border-top: 7.5px solid #EFEEEE;
+  margin-right: 36px;
+  margin-top: 45px;
+  padding-top: 30px;
+  padding-left: 22px;
+}
+
+li#modal-item-price.modal-left {
+  font-size: 29px;
+  font-weight: bolder;
+}
+
+div#modal-style-div {
+  margin-top: 29px;
+}
+
+div#modal-color-options {
+  margin-top: 4px;
+}
+
+.modal-color {
+  border-top: 1px solid #ffffff;
+  margin-right: 12px;
+}
+
+#modal-color-choice {
+  margin-top: 4px;
+  color: #A6A6A6;
+}
+
+#modal-size-selection {
+  margin-top: 11px;
+  margin-left: 14px;
+  display: flex;
+}
+
+form#modal-form {
+  margin-top: -2px;
+  margin-left: -4px;
+}
+
+input#modal-quantity {
+  padding-left: 12px;
+}
+
+button#modal-edit {
+  width: 125px;
+  margin-top: 8px;
+  margin-left: -10px;
+  border: 1px outset #337cf6;
+  border-radius: 0;
+}
+
+#modal-item-details-link {
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: 0.1px;
+  text-decoration: underline;
+}
+
+img#modal-item-image.modal-right {
+  margin: 0;
+  width: 265px;
+  margin-right: 13px;
 }
