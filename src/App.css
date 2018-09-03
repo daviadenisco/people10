@@ -241,3 +241,107 @@ img#modal-item-image.modal-right {
   width: 265px;
   margin-right: 13px;
 }
+
+div#bottomDiv {
+  border-top: 10px solid #EFEEEE;
+  padding-top: 40px;
+  display: flex;
+  margin-right: 30px;
+}
+
+div#bottomLeft {
+  color: #a1a5a9;
+}
+
+#questions {
+  font-weight: bolder;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#call-customer-service {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+div#bottomRight {
+  border-bottom: 2px solid #DFDFDF;
+  margin-left: 204px;
+  margin-bottom: 8px;
+}
+
+#promo-div {
+  display: flex;
+  border-bottom: 2px solid #DFDFDF;
+  padding-bottom: 20px;
+  color: #a1a5a9;
+  font-size: 14px;
+}
+
+#promo {
+}
+
+#promo-input {
+  margin-left: 310px;
+}
+
+div#estimated-total-div {
+  border-top: 2px solid #EFEEEE;
+  border-bottom: 10px solid #EFEEEE;
+}
+
+#estimated-total {
+  font-size: 20px;
+}
+
+#checkout-div {
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Questrial', sans-serif;
+  /* font-family: 'Istok Web', sans-serif; */
+  /* font-family: 'Varela', sans-serif; */
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#continue-shopping {
+  margin-left: auto;
+  margin-top: 12px;
+  margin-right: 36px;
+  font-size: 15px;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+  color: #2E2E2E;
+}
+
+#checkout-button {
+  font-size: 17.5px;
+  font-weight: bolder;
+  letter-spacing: 1.65px;
+  padding: 11px;
+  padding-left: 17px;
+  padding-right: 17px;
+  background: #305eac;
+  color: #ffffff;
+  border: none;
+}
+
+#secure-checkout-div {
+  display: flex;
+  vertical-align: middle;
+}
+
+#lock {
+  width: 22px;
+  height: 27px;
+  margin-left: auto;
+  margin-top: -2px;
+}
+
+#secure-checkout {
+  margin-left: 4px;
+  font-size: 15px;
+  color: #a1a5a9;
+  letter-spacing: 0.25px;
+  margin-bottom: 34px;
+}

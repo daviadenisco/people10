@@ -197,21 +197,31 @@ class App extends Component {
         </div>
         <div id="bottomDiv">
           <div id="bottomLeft">
-            <p>Need help or have questions?</p>
-            <p>Call Customer Service at</p>
-            <p>1-800-555-555</p>
+            <p id="questions">Need help or have questions?</p>
+            <p id="call-customer-service">Call Customer Service at</p>
+            <p id="phone">1-800-555-555</p>
             <a>Chat with one of our stylist</a>
+            <br />
             <a>See return or exchange policy</a>
           </div>
-          <div>
+          <div id="bottomRight">
+            <div id="promo-div">
+              <p id="promo">ENTER PROMO CODE OR GIFT CARD</p><input id="promo-input"/><button>APPLY</button>
+            </div>
             <p>SUB TOTAL</p>
             <p>PROMOTION CODE AJ10 APPLIED</p>
             <p>ESTIMATED SHIPPING*</p>
             <p>You qualify for free shipping because your order is over $50</p>
-            <p>ESTIMATED TOTAL</p>
-            <p>Tax will be applied during checkout</p>
-            <a>CONTINUE SHOPPING</a><button>CHECKOUT</button>
-            <p>Secure checkout. Shopping is always safe & secure</p>
+            <div id="estimated-total-div">
+              <p id="estimated-total">ESTIMATED TOTAL</p>
+              <p>Tax will be applied during checkout</p>
+            </div>
+            <div id="checkout-div">
+              <a id="continue-shopping">CONTINUE SHOPPING</a><button id="checkout-button">CHECKOUT</button>
+            </div>
+            <div id="secure-checkout-div">
+              <img id="lock" src="./referenceImages/lock.jpg" alt="lock"/><p id="secure-checkout">Secure checkout. Shopping is always safe & secure</p>
+            </div>
           </div>
         </div>
       </div>
