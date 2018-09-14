@@ -11,9 +11,6 @@ class App extends Component {
   state = {
     header: "YOUR SHOPPING CART",
     subHeader: "If the cart is completely empty, then we shall again add back the products for you.",
-    edit: "EDIT",
-    remove: "X REMOVE",
-    save: "SAVE FOR LATER",
     items: [{
       id: 1,
       image: './images/red-logo-shirt.jpg',
@@ -23,7 +20,8 @@ class App extends Component {
       size: "S",
       quantity: 1,
       price: "$11.00",
-      salePrice: ""
+      salePrice: "",
+      saveForLater: false
     },
     {
       id: 2,
@@ -34,7 +32,8 @@ class App extends Component {
       size: "S",
       quantity: 1,
       price: "$17.00",
-      salePrice: ""
+      salePrice: "",
+      saveForLater: false
     },
     {
       id: 3,
@@ -46,6 +45,7 @@ class App extends Component {
       quantity: 1,
       price: "$21.00",
       salePrice: "$9.00",
+      saveForLater: false
     },
     {
       id: 4,
@@ -56,9 +56,52 @@ class App extends Component {
       size: "M",
       quantity: 1,
       price: "$22.00",
-      salePrice: ""
+      salePrice: "",
+      saveForLater: false
     }]
   };
+
+  determinePrice(itemSalePrice) {
+
+  }
+
+  calcSubTotal(itemToAdd) {
+
+  }
+
+  deleteItem(itemToBeDeleted) {
+    this.setState((prevState) => {
+      return {
+        items: prevState.items.filter(existingItem => {
+          if(existingItem.id === itemToBeDeleted.id) {
+            return false;
+          } else {
+            return true;
+          }
+        })
+      }
+    });
+  }
+
+  toggleSaveForLater = ({ id }) => {
+    console.log('toggling save for later', id)
+    this.setState((prevState) => ({
+      items: prevState.items.map(item => {
+        if(item.id === id) {
+          // we found it
+          // update saveForLateR
+          return {
+            ...item,
+            quantity: 0,
+            price: "",
+            salePrice: "",
+            saveForLater: true,
+          }
+        }
+        return item;
+      })
+    }))
+  }
 
   render() {
     return (
@@ -100,8 +143,16 @@ class App extends Component {
                         <button type="button" className="btn btn-primary edit" data-toggle="modal" data-target="#exampleModalCenter">
                           EDIT
                         </button>
-                        <li className="itemMods">X REMOVE</li>
-                        <li className="itemMods">SAVE FOR LATER</li>
+
+
+
+
+
+
+
+
+                        <li className="itemMods" onClick={this.deleteItem.bind(this, item)}>X REMOVE</li>
+                        <li id="save-for-later" className="itemMods" onClick={() => this.toggleSaveForLater(item)}>SAVE FOR LATER</li>
                       </div>
 
                       <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -206,15 +257,15 @@ class App extends Component {
           </div>
           <div id="bottomRight">
             <div id="promo-div">
-              <p id="promo">ENTER PROMO CODE OR GIFT CARD</p><input id="promo-input"/><button>APPLY</button>
+              <p id="promo">ENTER PROMOTION CODE OR GIFT CARD</p><input id="promo-input"/><button>APPLY</button>
             </div>
-            <p>SUB TOTAL</p>
-            <p>PROMOTION CODE AJ10 APPLIED</p>
-            <p>ESTIMATED SHIPPING*</p>
-            <p>You qualify for free shipping because your order is over $50</p>
+            <div id="subTotal-div">
+              <p>SUB TOTAL</p>
+              <p>PROMOTION CODE AJ10 APPLIED</p>
+              <p>ESTIMATED SHIPPING*<p id="qualify">You qualify for free shipping because your order is over $50</p></p>
+            </div>
             <div id="estimated-total-div">
-              <p id="estimated-total">ESTIMATED TOTAL</p>
-              <p>Tax will be applied during checkout</p>
+              <p id="estimated-total">ESTIMATED TOTAL<p id="tax">Tax will be applied during checkout</p></p><p id="subTotal">$53.10</p>
             </div>
             <div id="checkout-div">
               <a id="continue-shopping">CONTINUE SHOPPING</a><button id="checkout-button">CHECKOUT</button>
